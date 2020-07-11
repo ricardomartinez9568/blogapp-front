@@ -1,0 +1,33 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div id="TxtLogo">
+    <img src="../../assets/icon/TXTWhiteJust 1.png">
+  </div>
+
+  <form #signInForm = "ngForm" (ngSubmit)="onSubmit(signInForm)">
+  <div id="TxtLogo1">
+    <h3 id="Username">Username</h3>
+    <img src="../../assets/icon/Vector.png">
+    <input type="text" name="username" #username="ngModel" [(ngModel)] = "model.username" placeholder="Username" id="InputUser"><br><br>
+  </div>
+
+  <div id="TxtLogo2">
+    <h3 id="Password">Password</h3>
+    <img src="../../assets/icon/Vector copy.png">
+    <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" id="InputPass"><br><br>
+  </div>
+<!-- Might have to change to input -->
+  <div id="button">
+    <input type="submit" value="Sign In">
+  </div>
+ 
+</form>
+<div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,59 @@
+ion-content {
+    --ion-background-color: #2594a9;
+}
+
+#Username {
+    color:white;
+}
+
+#Password {
+    color:white;
+}
+
+button {
+    background-color: white;
+    color:black;
+    border-radius: 20px;;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right:60px;
+}
+#InputUser {
+    display: inline-block;
+    outline:none;
+    border:none;
+    border-bottom: 2px solid white;
+    background-color: #2594a9;
+    padding-right:60px;
+
+}
+#InputPass {
+    background-color: #2594a9;
+    outline:none;
+    display: inline-block;
+    border:none;
+    border-bottom: 2px solid white;
+    padding-right:60px;
+}
+#Account {
+    display:inline-block;
+    color:white;
+    padding-left: 10px;
+}
+#TxtLogo1 {
+    padding-left:44px;
+    padding-top:100px;
+}
+#TxtLogo2 {
+    padding-left:44px;
+}
+
+#Logo {
+    padding-top: 108px;
+    padding-left: 23px;
+}
+#button {
+    padding-left: 100px;
+    padding-top: 50px;
+}

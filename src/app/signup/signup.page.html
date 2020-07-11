@@ -1,0 +1,37 @@
+<ion-header>
+
+  </ion-header>
+  
+  <ion-content>
+    <div id="Logo">
+      <img src="../../assets/icon/bi_file-arrow-up copy.png">
+      <h1 id="Account">Account Creation</h1>
+    </div>
+  <form #signUpForm = "ngForm" (ngSubmit)="onSubmit(signUpForm)">
+    <div id="TxtLogo1">
+      <h3 id="Username">Username</h3>
+      <img src="../../assets/icon/Vector.png">
+      <input type="text" #username = "ngModel" [(ngModel)] = "userService.selectedUser.username" name="username" placholder="Username" id="InputUser"><br><br>
+    </div>
+  
+    <div id="TxtLogo2">
+      <h3 id="Password">Password</h3>
+      <img src="../../assets/icon/Vector copy.png">
+      <input type="password" #password = "ngModel" [(ngModel)] = "userService.selectedUser.password" name="password" placholder="Password" id="InputPass"><br><br>
+    </div>
+
+    <div id="button">
+        <input type="submit" value="Sign Up">
+    </div>
+
+  </form>
+
+  <div class="success" *ngIf="showSucessMessage">
+      Saved successfully
+  </div>
+    
+    
+  
+  
+  </ion-content>
+  
