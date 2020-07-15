@@ -26,6 +26,7 @@ export class SignupPage implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(form.value);
+    form.value.notes = [];
     this.userService.postUser(form.value).subscribe(
       res => {
         this.showSucessMessage = true;

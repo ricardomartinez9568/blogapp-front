@@ -31,6 +31,7 @@ export class LoginPage implements OnInit {
     console.log(form.value);
     this.userService.login(form.value).subscribe(
       res => {
+        this.userService.setData(form.value.username);
         this.userService.setToken(res['token']);
         this.router.navigateByUrl('/blogs-list');
         console.log(res);

@@ -5,20 +5,18 @@
 <ion-content>
 
     <div id="TxtLogo">
-        <img id="arrow" src="../../assets/icon/bi_file-arrow-up.png">
+        <img id="arrow" routerLink = "/blogs-list" src="../../assets/icon/bi_file-arrow-up.png">
         <img id="logo" src="../../assets/icon/TXT_Turq 1.png">
     </div>
 
-    <div id="form">
-        <form [formGroup] = "form"  (ngSubmit) = "createNote()" >
+    <form [formGroup] = "form"  (ngSubmit) = "createNote()" >
           <label for="fname" id="TEXT1">Title:</label>
           <input formControlName = "title" name = "title" type="text" id="Title" ><br><br>
           <textarea formControlName = "description" name = "description" placeholder="Add passage here....." id="textarea" rows="20" cols="37"></textarea>
-          <br><br>
-        </form>
-    </div>
-    <div id="button">
+
+         <div id="button">
         <button type="submit">Save</button>
-    </div>
+         </div>
+    </form>
 
 </ion-content>

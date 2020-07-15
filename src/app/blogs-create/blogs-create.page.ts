@@ -39,6 +39,7 @@ export class BlogsCreatePage implements OnInit {
       this.convertTime = new Date(res.timestamp);
 
       this.date = (this.convertTime.getMonth() + 1) + '/' + this.convertTime.getDate() + '/' + this.convertTime.getFullYear();
+      console.log(this.date);
       this.location = this.lat + ',' + this.lng;
 
 
@@ -54,8 +55,10 @@ export class BlogsCreatePage implements OnInit {
     this.form.value.geolocation = this.location;
     this.form.value.date = this.date;
     this.form.value.username = this.userService.getData();
+    console.log(this.form.value);
+    console.log(this.userService.getData());
     this.userService.createNote(this.form.value).subscribe();
-    this.router.navigateByUrl('/blogs-create');
+    this.router.navigateByUrl('/blogs-list');
 
 
 

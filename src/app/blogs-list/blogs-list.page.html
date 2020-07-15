@@ -3,24 +3,29 @@
 </ion-header>
 
 <ion-content>
+<div *ngIf ="userDetails">
   <div id="TxtLogo">
     <img (click) = "onLogout()" id="power" src="../../assets/icon/eva_power-outline.png">
     <img id="logo" src="../../assets/icon/TXT_White 1.png">
-    <img id="plus" src="../../assets/icon/ant-design_plus-square-outlined.png">
+    <img id="plus" routerLink = "/blogs-create" src="../../assets/icon/ant-design_plus-square-outlined.png">
   </div>
 
-  <div id="text1">
-    <h2 id="Title">Title</h2>
 
-    <h2 id="Date">Date</h2>
+<div id="box" *ngIf = "userDetails.notes.length > 0">
+  <div  *ngFor = "let notes of userDetails.notes" id="text1">
+    <h2 id="Title">{{notes.title}}</h2>
+
+    <h2 id="Date">{{notes.date}}</h2>
+
+    <h2 id="Date">{{notes.location}}</h2>
+
+    <p id="textbox"> {{notes.description}} </p>
+
   </div>
 
-  <div id="text2"> 
-    <h2 id="Title">Title</h2>
+</div>
 
-    <h2 id="Date">Date</h2>
-  </div>
-
+</div>
 
 
 </ion-content>

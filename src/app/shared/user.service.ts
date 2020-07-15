@@ -10,7 +10,8 @@ import { User } from './user.model';
 export class UserService {
   selectedUser: User = {
     username: '',
-    password: ''
+    password: '',
+    notes: []
 };
 
 private username: string;
@@ -21,6 +22,7 @@ noAuthHeader = { headers: new HttpHeaders({ NoAuth: 'True' }) };
 
   setData(username){
     this.username = username;
+    console.log(this.username);
   }
   getData(){
     return this.username;

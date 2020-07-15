@@ -4,7 +4,7 @@
   
   <ion-content>
     <div id="Logo">
-      <img src="../../assets/icon/bi_file-arrow-up copy.png">
+      <img routerLink = "/login" src="../../assets/icon/bi_file-arrow-up copy.png">
       <h1 id="Account">Account Creation</h1>
     </div>
   <form #signUpForm = "ngForm" (ngSubmit)="onSubmit(signUpForm)">
@@ -21,7 +21,7 @@
     </div>
 
     <div id="button">
-        <input type="submit" value="Sign Up">
+        <input id="input" type="submit" value="Sign Up">
     </div>
 
   </form>
